@@ -21,7 +21,7 @@ public partial class register : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
         con.Open();
-        SqlCommand cmd = new SqlCommand("insert into [User] values('" + TextBox1.Text + "','" + TextBox2.Text + "')", con);
+        SqlCommand cmd = new SqlCommand("insert into [User] values('" + TextBox1.Text + "','" + TextBox2.Text + "','"+TextBox4.Text+"','"+TextBox5.Text+"')", con);
         int i = cmd.ExecuteNonQuery();
         if (i > 0)
         {
